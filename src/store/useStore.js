@@ -7,12 +7,9 @@ export const useStore = create((set) => ({
   closeSidebar: () => set({ isSidebarOpen: false }),
   setActiveTool: (tool) => set({ activeTool: tool, isSidebarOpen: false }),
   addHistory: (item) => set((s) => {
-    const newHistory = [item, ...s.history].slice(0, 20);
-    localStorage.setItem('calc_history', JSON.stringify(newHistory));
-    return { history: newHistory };
+    const newHist = [item, ...s.history].slice(0, 20);
+    localStorage.setItem('calc_history', JSON.stringify(newHist));
+    return { history: newHist };
   }),
-  clearHistory: () => {
-    localStorage.removeItem('calc_history');
-    set({ history: [] });
-  },
+  clearHistory: () => { localStorage.removeItem('calc_history'); set({ history: [] }); },
 }));
