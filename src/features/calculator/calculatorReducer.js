@@ -6,6 +6,8 @@ export const calculatorReducer = (state, action) => {
       const newDisplay = state.waitingForOperand ? action.value : (state.display === '0' ? action.value : state.display + action.value);
       return { ...state, display: newDisplay, waitingForOperand: false };
     case 'CLEAR': return initialState;
+    case 'SIGN': return { ...state, display: String(parseFloat(state.display) * -1) };
+    case 'PERCENT': return { ...state, display: String(parseFloat(state.display) / 100) };
     case 'OPERATOR':
       const val = parseFloat(state.display);
       if (state.operator && !state.waitingForOperand) {
