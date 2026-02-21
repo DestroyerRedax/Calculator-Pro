@@ -1,0 +1,21 @@
+import React from 'react';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { useStore } from './store/useStore';
+import Layout from './components/layout/Layout';
+import Calculator from './features/calculator/Calculator';
+import AgeCalculator from './features/age-calculator/AgeCalculator';
+import CurrencyConverter from './features/currency/CurrencyConverter';
+
+const qc = new QueryClient();
+export default function App() {
+  const tool = useStore(s => s.activeTool);
+  return (
+    <QueryClientProvider client={qc}>
+      <Layout>
+        {tool === 'calculator' && <Calculator />}
+        {tool === 'age' && <AgeCalculator />}
+        {tool === 'currency' && <CurrencyConverter />}
+      </Layout>
+    </QueryClientProvider>
+  );
+}
