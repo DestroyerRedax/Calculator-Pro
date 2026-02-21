@@ -16,13 +16,13 @@ export default function Sidebar() {
     <AnimatePresence>
       {isSidebarOpen && (
         <>
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={closeSidebar} className="fixed inset-0 bg-black/80 backdrop-blur-sm z-40" />
-          <motion.div initial={{ x: '-100%' }} animate={{ x: 0 }} exit={{ x: '-100%' }} transition={{ type: 'spring', damping: 25 }} className="fixed top-0 left-0 h-full w-[280px] bg-dark-surface z-50 p-6 flex flex-col shadow-2xl">
-            <div className="flex justify-between items-center mb-10 pt-4"><h2 className="text-xl font-bold text-dark-accent">Utility Pro</h2><X onClick={closeSidebar} className="text-dark-muted" /></div>
-            <div className="space-y-2">
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.05 }} onClick={closeSidebar} className="fixed inset-0 bg-black/80 backdrop-blur-sm z-40" />
+          <motion.div initial={{ x: '-100%' }} animate={{ x: 0 }} exit={{ x: '-100%' }} transition={{ duration: 0.1, ease: "linear" }} className="fixed top-0 left-0 h-full w-[260px] bg-dark-surface z-50 p-6 flex flex-col">
+            <div className="flex justify-between items-center mb-10 pt-4"><h2 className="text-xl font-bold text-dark-accent">Utility Pro</h2><X onClick={closeSidebar} /></div>
+            <div className="space-y-1">
               {menu.map(i => (
                 <button key={i.id} onClick={() => setActiveTool(i.id)} className={`w-full flex items-center space-x-4 p-4 rounded-2xl transition-all ${activeTool === i.id ? 'bg-dark-accent text-white' : 'text-dark-muted hover:bg-white/5'}`}>
-                  <i.icon size={22} /><span className="font-semibold">{i.name}</span>
+                  <i.icon size={20} /><span className="font-semibold">{i.name}</span>
                 </button>
               ))}
             </div>
