@@ -1,54 +1,56 @@
 # 📱 Calculator Pro
 
-**Calculator Pro** একটি প্রিমিয়াম অল-ইন-ওয়ান ইউটিলিটি অ্যাপ্লিকেশন। এটি মূলত একটি হাই-পারফরম্যান্স **PWA (Progressive Web App)** যা অফলাইনেও কাজ করে এবং আপনাকে দেয় নেটিভ iOS অ্যাপের মতো অভিজ্ঞতা।
+**Calculator Pro** একটি প্রিমিয়াম অল-ইন-ওয়ান ইউটিলিটি অ্যাপ্লিকেশন। এটি মূলত একটি হাই-পারফরম্যান্স **PWA (Progressive Web App)** যা অফলাইনেও কাজ করে এবং আপনাকে দেয় নেটিভ iOS অ্যাপের মতো চমৎকার অভিজ্ঞতা।
+
+---
+
+## 📦 ডাউনলোড ও ইনস্টলেশন (ইউজারদের জন্য)
+
+সরাসরি অ্যাপটি ব্যবহার করতে নিচের ধাপগুলো অনুসরণ করুন:
+
+১. এই পেজের ডানপাশে থাকা **[Releases](https://github.com/DestroyerRedax/calculator-pro/releases)** সেকশনে যান।
+২. সর্বশেষ (Latest) ভার্সনটি থেকে `.apk` বা আপনার পছন্দের ফাইলটি ডাউনলোড করুন।
+৩. ডাউনলোড শেষ হলে ফাইলটি ওপেন করে ইনস্টল করুন। 
+   *(বি.দ্র. অজানা উৎস থেকে ইনস্টল করার ওয়ার্নিং আসলে 'Install Anyway' দিন)*
 
 ---
 
 ## 🚀 মূল ফিচারসমূহ
 
-- 🔢 **Smart Calculator:** আইওএস স্টাইল ডিজাইন, লাইভ হিস্ট্রি এবং অ্যাডভান্সড সায়েন্টিফিক মোড।
-- 📅 **Age Calculator:** নিখুঁত বয়স গণনা এবং কাস্টম প্রিমিয়াম ইন্টারফেস।
+- 🔢 **Smart Calculator:** আইওএস ডিজাইন, লাইভ হিস্ট্রি এবং ওয়ান-ক্লিক সাইয়েন্টিফিক মোড।
+- 📅 **Age Calculator:** নিখুঁত বয়স গণনা এবং কাস্টম প্রিমিয়াম ইউজার ইন্টারফেস।
 - 💱 **Currency Converter:** বিশ্বের ১০০+ দেশের রিয়েল-টাইম এক্সচেঞ্জ রেট।
-- ⚖️ **BMI Calculator:** ম্যানুয়াল ইনপুট এবং উচ্চতা অনুযায়ী আইডিয়াল ওজন চেক করার সুবিধা।
-- ⚡ **Ultra Fast:** মাত্র ৫০-১০০ মিলিসেকেন্ড এনিমেশন স্পিড এবং ব্লিঙ্ক-ফাস্ট পারফরম্যান্স।
+- ⚖️ **BMI Calculator:** ম্যানুয়াল ডাটা ইনপুট এবং আইডিয়াল ওজন চেক করার সুবিধা।
+- ⚡ **Ultra Fast:** মাত্র ৫০-৮০ মিলিসেকেন্ড রেসপন্স টাইম এবং স্মুথ এনিমেশন।
 
 ---
 
 ## 🛠️ টেক স্ট্যাক
 
 - **Frontend:** React 18, Vite
-- **Styling:** Tailwind CSS (Premium Dark Theme)
+- **Styling:** Tailwind CSS (iOS Signature Dark Theme)
 - **Animation:** Framer Motion
 - **State Management:** Zustand
 - **PWA:** Vite PWA Plugin (Offline Support)
 
 ---
 
-## 📦 ইনস্টলেশন
+## 👨‍💻 ডেভেলপারদের জন্য (Build from Source)
 
-১. প্রোজেক্টটি ক্লোন করুন: `git clone https://github.com/DestroyerRedax/calculator-pro.git`
-২. ডিপেন্ডেন্সি ইনস্টল করুন: `npm install`
-৩. রান করুন: `npm run dev`
+আপনি যদি নিজে কোড এডিট করতে বা লোকালি রান করতে চান:
+
+১. `git clone https://github.com/DestroyerRedax/calculator-pro.git`
+২. `npm install`
+৩. `npm run dev` (লোকাল হোস্টের জন্য)
+৪. `npm run build` (প্রোডাকশন বিল্ডের জন্য)
 
 ---
 
 <!-- ANIMATED FOOTER SECTION -->
 <div align="center">
   <br />
-  <svg width="400" height="60" viewBox="0 0 400 60" xmlns="http://www.w3.org/2000/svg">
-    <style>
-      .text {
-        font: bold 22px 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        fill: #FF9500;
-        text-anchor: middle;
-        dominant-baseline: middle;
-      }
-    </style>
-    <text x="50%" y="50%" class="text">
-      <animate attributeName="opacity" values="0;1;1;0" dur="3s" repeatCount="indefinite" />
-      Developed By DestroyerRedax
-    </text>
-  </svg>
+  <img src="https://readme-typing-svg.herokuapp.com?font=Inter&weight=700&size=24&pause=1000&color=FF9500&center=true&vCenter=true&width=435&lines=Developed+By+DestroyerRedax" alt="Typing SVG" />
+  
   <p align="center">
     <a href="https://github.com/DestroyerRedax">
       <img src="https://img.shields.io/badge/DestroyerRedax-Profile-orange?style=for-the-badge&logo=github" alt="DestroyerRedax GitHub" />
