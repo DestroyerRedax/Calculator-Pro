@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "app.mythbrix.calculator_pro",
+        "sha256_cert_fingerprints": ["4C:4A:35:A1:11:AA:AA:0F:EC:ED:9D:FF:12:EF:51:77:B1:BC:40:66:E6:C2:F2:B9:9D:2C:5F:EB:02:74:57:CE"]
+      }
+    }]
