@@ -7,10 +7,24 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      manifest: false // আপাতত আইকন জনিত এরর এড়াতে এটি false রাখুন, বিল্ড হয়ে যাবে।
+      workbox: {
+        globPatterns: ['**/*.{js,css,html,ico,png,svg}'],
+        runtimeCaching: [
+          {
+            urlPattern: /^https:\/\/open\.er-api\.com\/.*/i,
+            handler: 'NetworkFirst', // প্রথমে নেটওয়ার্ক দেখবে, না থাকলে ক্যাশ থেকে কারেন্সি দেখাবে
+            options: { cacheName: 'currency-cache' }
+          }
+        ]
+      },
+      manifest: {
+        name: 'Calculator Pro',
+        short_name: 'CalcPro',
+        theme_color: '#121212',
+        background_color: '#121212',
+        display: 'standalone',
+        orientation: 'portrait'
+      }
     })
-  ],
-  build: {
-    outDir: 'dist',
-  }
+  ]
 })
