@@ -7,17 +7,10 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      manifest: {
-        name: 'Calculator Pro',
-        short_name: 'CalcPro',
-        theme_color: '#121212',
-        background_color: '#121212',
-        display: 'standalone',
-        icons: [
-          { src: 'pwa-192x192.png', sizes: '192x192', type: 'image/png' },
-          { src: 'pwa-512x512.png', sizes: '512x512', type: 'image/png', purpose: 'any maskable' }
-        ]
-      }
+      manifest: false // আপাতত আইকন জনিত এরর এড়াতে এটি false রাখুন, বিল্ড হয়ে যাবে।
     })
-  ]
+  ],
+  build: {
+    outDir: 'dist',
+  }
 })
