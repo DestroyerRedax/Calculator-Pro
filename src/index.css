@@ -5,7 +5,6 @@ body {
   height: 100vh; width: 100vw; position: fixed;
 }
 #root { height: 100%; width: 100%; }
-/* এনিমেশন গতি চরম পর্যায়ে বাড়ানো হয়েছে */
-* { transition-duration: 50ms !important; transition-timing-function: linear !important; }
+* { transition-duration: 80ms !important; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 input[type="number"]::-webkit-inner-spin-button { display: none; }
