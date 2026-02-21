@@ -7,23 +7,33 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      workbox: {
-        globPatterns: ['**/*.{js,css,html,ico,png,svg}'],
-        runtimeCaching: [
-          {
-            urlPattern: /^https:\/\/open\.er-api\.com\/.*/i,
-            handler: 'NetworkFirst', // প্রথমে নেটওয়ার্ক দেখবে, না থাকলে ক্যাশ থেকে কারেন্সি দেখাবে
-            options: { cacheName: 'currency-cache' }
-          }
-        ]
-      },
+      includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'mask-icon.svg'],
       manifest: {
         name: 'Calculator Pro',
         short_name: 'CalcPro',
-        theme_color: '#121212',
-        background_color: '#121212',
+        description: 'A premium, high-performance utility suite including Smart Calculator, Age Calculator, BMI Calculator, and Currency Converter.',
+        theme_color: '#000000',
+        background_color: '#000000',
         display: 'standalone',
-        orientation: 'portrait'
+        orientation: 'portrait',
+        icons: [
+          {
+            src: 'pwa-192x192.png',
+            sizes: '192x192',
+            type: 'image/png'
+          },
+          {
+            src: 'pwa-512x512.png',
+            sizes: '512x512',
+            type: 'image/png'
+          },
+          {
+            src: 'pwa-512x512.png',
+            sizes: '512x512',
+            type: 'image/png',
+            purpose: 'any maskable'
+          }
+        ]
       }
     })
   ]
