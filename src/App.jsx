@@ -5,6 +5,7 @@ import Layout from './components/layout/Layout';
 import Calculator from './features/calculator/Calculator';
 import AgeCalculator from './features/age-calculator/AgeCalculator';
 import CurrencyConverter from './features/currency/CurrencyConverter';
+import BMICalculator from './features/bmi/BMICalculator';
 
 const qc = new QueryClient();
 export default function App() {
@@ -15,6 +16,7 @@ export default function App() {
         {tool === 'calculator' && <Calculator />}
         {tool === 'age' && <AgeCalculator />}
         {tool === 'currency' && <CurrencyConverter />}
+        {tool === 'bmi' && <BMICalculator />}
       </Layout>
     </QueryClientProvider>
   );
