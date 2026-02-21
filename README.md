@@ -40,8 +40,11 @@
 আপনি যদি নিজে কোড এডিট করতে বা লোকালি রান করতে চান:
 
 ১. `git clone https://github.com/DestroyerRedax/calculator-pro.git`
+
 ২. `npm install`
+
 ৩. `npm run dev` (লোকাল হোস্টের জন্য)
+
 ৪. `npm run build` (প্রোডাকশন বিল্ডের জন্য)
 
 ---
